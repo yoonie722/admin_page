@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<include src="include/head.html" title="Vrix | 모듈">
+	<style>
+		html{overflow: auto;}
+		body {
+			width: 100%;
+			background: #f3f3f3 url("../img/back_img.jpg") 50% 0 no-repeat;
+		}
+		.bx_module {
+			max-width: 1200px;
+			width: 100%;
+			margin: 0px auto 60px;
+			box-sizing: border-box;
+		}
+		.h1{
+			font-weight: bold;
+			font-size: 20px;
+			color: #fff; 
+			padding: 20px 0;		
+			display: block; 
+			clear: both;
+		}
+		.h1 img {
+			display: inline-block;
+			vertical-align: middle;
+			width: 150px;
+		}
+		.h1 span {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 30px;
+		}
+		.h3{
+			font-weight: 400;
+			font-size: 16px;
+			color: #444;
+		}
+		.h3 + div {
+			margin:5px 10px 30px;
+		}
+		.noti {
+			color: #0747a6;
+			margin: 20px 0px;
+			font-weight: bold;
+		}
+		.tab_btns button.active {
+			background-color: #ffffff;
+			border-bottom: 1px solid #ffffff;
+		}
+		.tab_cont {
+			background: #fff;
+			overflow: hidden;
+		}
+		.tab_cont .btn.mid {
+			position: static;
+			bottom: 0; right: 0;
+		}
+		.bx_left,.bx_right{
+			width: 50%;
+			float: left;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.bx_left {
+			border-right: 1px dashed #8292a2;
+		}
+		.point {
+			color: #ff8e66;
+		}
+	</style>
+</include>
+<body>
+	<div class="bx_module">
+		<h1 class="h1">
+			<img src="/img/vrix_admin_logo.png" alt="Vrix logo">
+			<span>모듈 페이지</span>
+		</h1>
+		<div class="cont">
+			<div class="bx_top">
+				<h2 class="sub_tit">기본가이드</h2>
+				<div class="tab_btns">
+					<button type="button" class="active">기본 & 버튼 모음</button>
+					<button type="button">입력폼</button>
+				</div>
+			</div>
+			<div class="tab_cont active">
+				<h3>* 기본 크기 및 폰트</h3>
+				<ul class="noti">
+					<li>- 컨텐츠 영역 가로 값 : 1200px / 가운데 정렬</li>
+					<li>- 기본 폰트 : 맑은 고딕 / 영문 : Arial</li>
+				</ul>
+				<div class="bx_left">
+					<h3 class="h3">&lt; 기본 버튼 .btn &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button, a / padding: 10px 14px <br>
+							색깔 추가 크래스 .blue, .gray / border-radius: 5px
+						</p>
+						<button type="button" class="btn">수정</button>
+						<button type="button" class="btn blue">제거</button>
+						<button type="button" class="btn gray">제거</button>
+					</div>
+					<h3 class="h3">&lt; 작은 버튼 .btn.small &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button, a <br>
+							색 : #8292a2 / font-size: 11px / padding: 5px 7px 
+						</p>
+						<button type="button" class="btn small">수정</button>
+						<a href="#" class="btn small">수정</a>
+					</div>
+					<h3 class="h3">&lt; 중간 버튼 .btn.mid &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button, a <br>
+							padding: 10px 21px / border-radius: 5px
+						</p>
+						<button type="button" class="btn mid">수정</button>
+						<a href="#" class="btn mid gray">수정</a>
+					</div>
+					<h3 class="h3">&lt; 큰 버튼 .btn.big &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button, a <br>
+							font-size: 14px / padding: 13px 36px / border-radius: 5px
+						</p>
+						<button type="button" class="btn big">등록</button>
+						<a href="#" class="btn big gray">취소</a>
+					</div>
+				</div>
+				<div class="bx_right">
+					<h3 class="h3">&lt; 새로고침 버튼 .btn.refresh &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button <br>
+							색 : #f9f8f8 / font-size: 12px / border-radius: 3px
+						</p>
+						<button type="button" class="btn refresh">새로고침</button>
+					</div>
+					<h3 class="h3">&lt; 신규추가 버튼 .btn.edit &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button <br>
+							색 : #ff8e66 / font-size: 12px / border-radius: 5px
+						</p>
+						<button type="button" class="btn edit">신규 추가</button>
+					</div>
+					<h3 class="h3">&lt; 토글 버튼 .bx_toggle .btn_tog &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : button / 크기 : 44px (radio버튼 하나) <br>
+							색 : #ff8e66 / font-size: 12px / border-radius: 5px
+						</p>
+						<div class="bx_toggle">
+							<input type="radio" name="tog_tp2" id="tog_btn_tp1" class="btn_tog" checked>
+							<label for="tog_btn_tp1">사용</label>
+							<input type="radio" name="tog_tp2" id="tog_btn_tp2" class="btn_tog">
+							<label for="tog_btn_tp2">미사용</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab_cont">
+				<div>
+					<h3 class="h3">&lt; 셀렉트 박스 .slct &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : select / padding: 0px 26px 0 11px <br>
+							<strong style="font-size: 13px;">* 가로 크기는 인라인 스타일로 제어 가능</strong>
+						</p>
+						<select class="slct" style="width:330px;">
+							<option value="">사업자를 선택해 주세요.</option>
+							<option value="">사업자를 선택해 주세요.</option>
+							<option value="">사업자를 선택해 주세요. 사업자를 선택해 주세요.</option>
+						</select>
+					</div>
+					<h3 class="h3">&lt; input 박스 .ipt &gt;</h3>
+					<div>
+						<p style="font-size: 16px; margin-bottom: 15px;">
+							사용 태그 : input / padding: 0px 10px <br>
+							<strong style="font-size: 13px;">* 가로 크기는 인라인 스타일로 제어 가능</strong>
+						</p>
+						<input type="text" class="ipt" style="width:220px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="bx_top">
+				<h3 class="sub_tit">테이블 스타일</h3>
+			</div>
+			<div class="bx_ground">
+				<h3 class="h3">&lt; 테이블 &gt;</h3>
+				<div>
+					<p style="font-size: 16px; margin-bottom: 15px;">
+						table 기본 class .tbl <br>
+						font 색 : #666666 / font-size: 13px <br>
+						td, th에 class <em class="point">.ver_top</em> 추가시 위쪽 정렬 <br><br>
+						<strong class="point">* 가로 크기는 인라인 스타일로 제어 가능 *</strong>
+					</p>
+				</div>
+				<table class="tbl">
+					<caption>지면 정보</caption>
+					<colgroup>
+						<col style="width:162px;">
+						<col style="width:416px;">
+						<col style="width:162px;">
+						<col>
+					</colgroup>
+					<tr>
+						<th>사업자 <em>*</em></th>
+						<td colspan="3">
+							<select class="slct" style="width:330px;">
+								<option value="">사업자를 선택해 주세요.</option>
+								<option value="">사업자를 선택해 주세요.</option>
+								<option value="">사업자를 선택해 주세요. 사업자를 선택해 주세요.</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>상태 <em>*</em></th>
+						<td colspan="3">
+							<div class="bx_toggle">
+								<input type="radio" name="toggles" id="tog_btn01" class="btn_tog" checked>
+								<label for="tog_btn01">ON</label>
+								<input type="radio" name="toggles" id="tog_btn02" class="btn_tog">
+								<label for="tog_btn02">OFF</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>미디어명 <em>*</em></th>
+						<td>
+							<select class="slct">
+								<option value="">밀크뮤직</option>
+								<option value="">밀크뮤직</option>
+								<option value="">밀크뮤직</option>
+							</select>
+						</td>
+						<th>미디어 유형 <em>*</em></th>
+						<td>APP (AND)</td>
+					</tr>
+					<tr>
+						<th>지면명 <em>*</em></th>
+						<td colspan="3">
+							<input type="text" class="ipt" style="width:746px;">
+							<span>0/50</span>
+						</td>
+					</tr>
+				</table>
+				<table class="tbl">
+					<caption>광고 송출 유형</caption>
+					<colgroup>
+						<col style="width:162px;">
+						<col style="width:226px;">
+						<col style="width:162px;">
+						<col>
+						<col style="width:152px;">
+						<col style="width:228px;">
+					</colgroup>
+					<tr>
+						<th>하우스 광고 <em>*</em></th>
+						<td colspan="3">
+							<input type="radio" name="group07" id="radio13" class="radio">
+							<label for="radio13">노출</label>
+							<input type="radio" name="group07" id="radio14" class="radio">
+							<label for="radio15">미노출</label>
+							<div class="ad_txt">
+								(하우스 광고 프리퀀시 <em class="ico_info">?</em> : 60분 <input type="text" class="ipt" style="width:50px;"> 번)
+							</div>
+						</td>
+						<th>nonlinear광고 <em>*</em></th>
+						<td>
+							<input type="radio" name="group08" id="radio15" class="radio">
+							<label for="radio15">노출</label>
+							<input type="radio" name="group08" id="radio16" class="radio">
+							<label for="radio16">미노출</label>
+						</td>
+					</tr>
+					<tr>
+						<th class="ver_top">pre-roll <em>*</em></th>
+						<td class="tp2 ver_top">
+							<input type="radio" name="group09" id="radio17" class="radio">
+							<label for="radio17">노출</label>
+							<input type="radio" name="group09" id="radio18" class="radio">
+							<label for="radio18">미노출</label>
+							<div class="wrap_types">
+								<strong>[우선순위]</strong>
+								<select class="slct" style="width:186px;">
+									<option value="">지면 설정 우선</option>
+									<option value="">지면 설정 우선</option>
+									<option value="">지면 설정 우선 지면 설정 우선</option>
+								</select>
+							</div>
+							<div class="wrap_types">
+								<strong>[편성 설정]</strong>
+								<div class="box">
+									<span class="left">NHN Ace</span> <input type="text" class="ipt right" style="width:47px;"> 
+								</div>
+								<div class="box">
+									<span class="left">AMS</span> <input type="text" class="ipt right" style="width:47px;"> 
+								</div>
+								<div class="box">
+									<span class="left">AD Network</span> <button type="button" class="btn small">상세</button> <input type="text" class="ipt right" style="width:47px;"> 
+								</div>
+								<div class="box">
+									<span class="left">광고수</span> <span>10개</span>
+								</div>
+							</div>
+						</td>
+						<th class="ver_top">Mid-roll <em>*</em></th>
+						<td class="tp2 ver_top">
+							<input type="radio" name="group10" id="radio19" class="radio">
+							<label for="radio19">노출</label>
+							<input type="radio" name="group10" id="radio20" class="radio">
+							<label for="radio20">미노출</label>
+						</td>
+						<th class="ver_top">post-roll <em>*</em></th>
+						<td class="tp2 ver_top">
+							<input type="radio" name="group11" id="radio21" class="radio">
+							<label for="radio21">노출</label>
+							<input type="radio" name="group11" id="radio22" class="radio">
+							<label for="radio22">미노출</label>
+							<div class="wrap_types">
+								<strong>[우선순위]</strong>
+								<select class="slct" style="width:186px;">
+									<option value="">지면 설정 우선</option>
+									<option value="">지면 설정 우선</option>
+									<option value="">지면 설정 우선</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>Seekbar <em>*</em></th>
+						<td colspan="5">
+							<input type="radio" name="group12" id="radio23" class="radio">
+							<label for="radio23">노출</label>
+							<input type="radio" name="group12" id="radio24" class="radio">
+							<label for="radio24">미노출</label>
+						</td>
+					</tr>
+				</table>
+				<table class="tbl">
+					<colgroup>
+						<col style="width:60px;">
+						<col>
+						<col style="width:160px;">
+						<col style="width:160px;">
+						<col style="width:160px;">
+						<col style="width:90px;">
+						<col style="width:153px;">
+						<col style="width:83px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>사업자</th>
+							<th>미디어</th>
+							<th>지면</th>
+							<th>영상길이</th>
+							<th>광고 수</th>
+							<th>상태</th>
+							<th>기능</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="center">6</td>
+							<td>SBS 인간은 공자는 작고 부패뿐이다. 인간은 날카로우나 피어나기 천고에 피가 청춘에서만 dddddddddddddddddddddddddddddddddddddddd</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles01" id="tog_btn03" class="btn_tog" checked>
+									<label for="tog_btn03">사용</label>
+									<input type="radio" name="toggles01" id="tog_btn04" class="btn_tog">
+									<label for="tog_btn04">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+						<tr>
+							<td class="center">5</td>
+							<td>SBS</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles02" id="tog_btn05" class="btn_tog" checked>
+									<label for="tog_btn05">사용</label>
+									<input type="radio" name="toggles02" id="tog_btn06" class="btn_tog">
+									<label for="tog_btn06">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+						<tr>
+							<td class="center">4</td>
+							<td>SBS</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles03" id="tog_btn07" class="btn_tog" checked>
+									<label for="tog_btn07">사용</label>
+									<input type="radio" name="toggles03" id="tog_btn08" class="btn_tog">
+									<label for="tog_btn08">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+						<tr>
+							<td class="center">2</td>
+							<td>SBS</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles04" id="tog_btn09" class="btn_tog" checked>
+									<label for="tog_btn09">사용</label>
+									<input type="radio" name="toggles04" id="tog_btn10" class="btn_tog">
+									<label for="tog_btn10">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+						<tr>
+							<td class="center">2</td>
+							<td>SBS</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles05" id="tog_btn11" class="btn_tog" checked>
+									<label for="tog_btn11">사용</label>
+									<input type="radio" name="toggles05" id="tog_btn12" class="btn_tog">
+									<label for="tog_btn12">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+						<tr>
+							<td class="center">1</td>
+							<td>SBS</td>
+							<td>SBS_AND</td>
+							<td>Sbs_지면명1</td>
+							<td>0초 ~ 3,600초</td>
+							<td class="center">3개</td>
+							<td class="center">
+								<div class="bx_toggle">
+									<input type="radio" name="toggles06" id="tog_btn13" class="btn_tog" checked>
+									<label for="tog_btn13">사용</label>
+									<input type="radio" name="toggles06" id="tog_btn14" class="btn_tog">
+									<label for="tog_btn14">미사용</label>
+								</div>
+							</td>
+							<td class="center"><button type="button" class="btn small">수정</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

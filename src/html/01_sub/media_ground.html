@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<include src="../include/head.html" title="Vrix | 지면 등록"></include>
+<body class="sub">
+  <include src="../include/header.html"></include>
+  <section class="container">
+    <div class="bx_top">
+      <h2 class="sub_tit">지면 등록</h2>
+    </div>
+    <div class="bx_ground">
+      <table class="tbl">
+        <caption>지면 정보</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col style="width:416px;">
+          <col style="width:162px;">
+          <col>
+        </colgroup>
+        <tr>
+          <th>사업자 <em>*</em></th>
+          <td colspan="3">
+            <select class="slct" style="width:330px;">
+              <option value="">사업자를 선택해 주세요.</option>
+              <option value="">사업자를 선택해 주세요.</option>
+              <option value="">사업자를 선택해 주세요. 사업자를 선택해 주세요.</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>상태 <em>*</em></th>
+          <td colspan="3">
+            <div class="bx_toggle">
+              <input type="radio" name="toggles" id="tog_btn01" class="btn_tog" checked>
+              <label for="tog_btn01">ON</label>
+              <input type="radio" name="toggles" id="tog_btn02" class="btn_tog">
+              <label for="tog_btn02">OFF</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>미디어명 <em>*</em></th>
+          <td>
+            <select class="slct">
+              <option value="">밀크뮤직</option>
+              <option value="">밀크뮤직</option>
+              <option value="">밀크뮤직</option>
+            </select>
+          </td>
+          <th>미디어 유형 <em>*</em></th>
+          <td>APP (AND)
+            <div class="tooltip">
+              <button class="ico_info" data-name="open_tooltip">?</button>
+              <p class="box">안녕하세요, 저는 툴팁입니다. 마우스 클릭시 나타나는 툴팁입니다. 저를 닫고 싶으시다면 바깥 영역을 클릭해주세요. 감사합니다.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>지면명 <em>*</em></th>
+          <td colspan="3">
+            <input type="text" class="ipt" style="width:746px;">
+            <span>0/50</span>
+          </td>
+        </tr>
+      </table>
+      <table class="tbl">
+        <caption>광고 송출 유형</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col style="width:226px;">
+          <col style="width:162px;">
+          <col>
+          <col style="width:152px;">
+          <col style="width:228px;">
+        </colgroup>
+        <tr>
+          <th>하우스 광고 <em>*</em></th>
+          <td colspan="3">
+            <input type="radio" name="group01" id="radio01" class="radio">
+            <label for="radio01">노출</label>
+            <input type="radio" name="group01" id="radio02" class="radio">
+            <label for="radio02">미노출</label>
+            <div class="ad_txt">
+              (하우스 광고 프리퀀시
+              <div class="tooltip over"> <!-- 마우스 오버시 툴팁 보이기 -->
+                <button class="ico_info red">!</button>
+                <p class="box">안녕하세요, 저는 툴팁입니다. 마우스 오버시 나타나는 툴팁입니다. 저를 닫고 싶으시다면 마우스를 움직여 주세요. 감사합니다.</p>
+              </div>
+              : 60분 <input type="text" class="ipt" style="width:50px;"> 번)
+            </div>
+          </td>
+          <th>nonlinear광고 <em>*</em></th>
+          <td>
+            <input type="radio" name="group02" id="radio03" class="radio">
+            <label for="radio03">노출</label>
+            <input type="radio" name="group02" id="radio04" class="radio">
+            <label for="radio04">미노출</label>
+          </td>
+        </tr>
+        <tr>
+          <th>pre-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="group03" id="radio05" class="radio">
+            <label for="radio05">노출</label>
+            <input type="radio" name="group03" id="radio06" class="radio">
+            <label for="radio06">미노출</label>
+          </td>
+          <th>Mid-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="group04" id="radio07" class="radio">
+            <label for="radio07">노출</label>
+            <input type="radio" name="group04" id="radio08" class="radio">
+            <label for="radio08">미노출</label>
+          </td>
+          <th>post-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="group05" id="radio09" class="radio">
+            <label for="radio09">노출</label>
+            <input type="radio" name="group05" id="radio10" class="radio">
+            <label for="radio10">미노출</label>
+          </td>
+        </tr>
+        <tr>
+          <th>Seekbar <em>*</em></th>
+          <td colspan="5">
+            <input type="radio" name="group06" id="radio11" class="radio">
+            <label for="radio11">노출</label>
+            <input type="radio" name="group06" id="radio12" class="radio">
+            <label for="radio12">미노출</label>
+          </td>
+        </tr>
+      </table>
+      <table class="tbl">
+        <caption>광고 송출 유형</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col style="width:226px;">
+          <col style="width:162px;">
+          <col>
+          <col style="width:162px;">
+          <col style="width:228px;">
+        </colgroup>
+        <tr>
+          <th>하우스 광고 <em>*</em></th>
+          <td colspan="3">
+            <input type="radio" name="group07" id="radio13" class="radio">
+            <label for="radio13">노출</label>
+            <input type="radio" name="group07" id="radio14" class="radio">
+            <label for="radio15">미노출</label>
+            <div class="ad_txt">
+              (하우스 광고 프리퀀시
+              <div class="tooltip">
+                <button class="ico_info" data-name="open_tooltip">?</button>
+                <p class="box">안녕하세요, 저는 툴팁입니다. 마우스 클릭시 나타나는 툴팁입니다. 저를 닫고 싶으시다면 바깥 영역을 클릭해주세요. 감사합니다.</p>
+              </div>
+              : 60분 <input type="text" class="ipt" style="width:50px;"> 번)
+            </div>
+          </td>
+          <th>nonlinear광고 <em>*</em></th>
+          <td>
+            <input type="radio" name="group08" id="radio15" class="radio">
+            <label for="radio15">노출</label>
+            <input type="radio" name="group08" id="radio16" class="radio">
+            <label for="radio16">미노출</label>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_top">pre-roll <em>*</em></th>
+          <td class="tp2 ver_top">
+            <input type="radio" name="group09" id="radio17" class="radio">
+            <label for="radio17">노출</label>
+            <input type="radio" name="group09" id="radio18" class="radio">
+            <label for="radio18">미노출</label>
+            <div class="wrap_types">
+              <strong>[우선순위]</strong>
+              <select class="slct" style="width:186px;">
+                <option value="">지면 설정 우선</option>
+                <option value="">지면 설정 우선</option>
+                <option value="">지면 설정 우선 지면 설정 우선</option>
+              </select>
+            </div>
+            <div class="wrap_types">
+              <strong>[편성 설정]</strong>
+              <div class="box">
+                <span class="left">NHN Ace</span> <input type="text" class="ipt right" style="width:47px;"> 
+              </div>
+              <div class="box">
+                <span class="left">AMS</span> <input type="text" class="ipt right" style="width:47px;"> 
+              </div>
+              <div class="box">
+                <span class="left">AD Network</span> <button type="button" class="btn small">상세</button> <input type="text" class="ipt right" style="width:47px;"> 
+              </div>
+              <div class="box">
+                <span class="left">광고수</span> <span>10개</span>
+              </div>
+            </div>
+          </td>
+          <th class="ver_top">Mid-roll <em>*</em></th>
+          <td class="tp2 ver_top">
+            <input type="radio" name="group10" id="radio19" class="radio">
+            <label for="radio19">노출</label>
+            <input type="radio" name="group10" id="radio20" class="radio">
+            <label for="radio20">미노출</label>
+          </td>
+          <th class="ver_top">post-roll <em>*</em></th>
+          <td class="tp2 ver_top">
+            <input type="radio" name="group11" id="radio21" class="radio">
+            <label for="radio21">노출</label>
+            <input type="radio" name="group11" id="radio22" class="radio">
+            <label for="radio22">미노출</label>
+            <div class="wrap_types">
+              <strong>[우선순위]</strong>
+              <select class="slct" style="width:186px;">
+                <option value="">지면 설정 우선</option>
+                <option value="">지면 설정 우선</option>
+                <option value="">지면 설정 우선</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Seekbar <em>*</em></th>
+          <td colspan="5">
+            <input type="radio" name="group12" id="radio23" class="radio">
+            <label for="radio23">노출</label>
+            <input type="radio" name="group12" id="radio24" class="radio">
+            <label for="radio24">미노출</label>
+          </td>
+        </tr>
+      </table>
+      <table class="tbl">
+        <caption>타케팅</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col>
+        </colgroup>
+        <tr>
+          <th class="ver_top">카테고리</th>
+          <td class="tp2">
+            <input type="radio" name="group13" id="radio25" class="radio">
+            <label for="radio25">노출</label>
+            <input type="radio" name="group13" id="radio26" class="radio">
+            <label for="radio26">미노출</label>
+            <div class="wrap_types">
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <button type="button" class="btn">추가</button>
+            </div>
+            <div class="wrap_types">
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <button type="button" class="btn blue">제거</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="bx_btn">
+        <button type="button" class="btn big">등록</button>
+        <button type="button" class="btn big gray">취소</button>
+      </div>
+    </div>
+  </section>
+  <include src="../include/footer.html"></include>
+</body>
+</html>

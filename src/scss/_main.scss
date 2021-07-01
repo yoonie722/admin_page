@@ -1,0 +1,137 @@
+.main {
+  width: 100%;
+  @include bg ("back_img.jpg", no-repeat, 50% 0, null,#f3f3f3);
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.cont + .cont {
+  margin-top: 20px;
+}
+
+//공지사항 & 항목별 현황
+.cont {
+  background-color: $white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+  .top_tit {
+    line-height: 76px;
+    padding: 0 20px;
+    border-bottom: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    h2 {
+      display: inline-block;
+      font-size: 16px;
+    }
+    .more {
+      float: right;
+      font-size: 12px;
+      color: #999;
+      &:before {
+        content: "+";
+        display: inline-block;
+        width: 7px;
+        margin-right:4px;
+      }
+    }
+    .date_area {
+      float: right;
+      .date { 
+        margin-right: 14px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  }
+  .bx_notice {
+    padding: 20px;
+    box-sizing: border-box;
+    li {
+      width: 100%;
+      height: 28px;
+      font-size: 13px;
+      a {
+        display: block;
+        line-height: 28px;
+      }
+      .txt {
+        display: inline-block;
+        max-width: 1020px;
+        @include ellipsis;
+        vertical-align: middle;
+      }
+      .date {
+        float: right;
+        width: 100px;
+        line-height: 28px;
+        text-align: center;
+      }
+      em {
+        font-size: 12px;
+        color: #ff7342;
+        vertical-align: middle;
+      }
+    }
+    &.nodata {
+      padding: 68px 20px;
+      text-align: center;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+.bx_square {
+  padding: 10px 9.5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.wrap_item {
+  float: left;
+  width: 372px;
+  height: 190px;
+  border: 1px solid #dbdbdb;
+  margin: 10px 10.5px;
+  box-sizing: border-box;
+  .sq_tit {
+    padding: 15px 15px;
+    line-height: 14px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    @include ellipsis;
+    box-sizing: border-box;
+  }
+  .cell {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    li {
+      font-size: 13px;
+      line-height: 28px;
+      .num {
+        display: inline-block;
+        color: #00a2ff;
+        font-weight: $bold;
+      }
+    }
+  }
+  .nodata {
+    position: relative;
+    font-size: 13px;
+    line-height: 144px;
+    text-align: center;
+  }
+  .loading {
+    width: 372px;
+    height: 144px;
+    @include bg("spinner.gif", no-repeat, 50% 50%, 50px 50px);
+    li {
+      display: none;
+    }
+  }
+}
+#graph_container01 {
+  width: 100%;
+  height: 500px;
+}

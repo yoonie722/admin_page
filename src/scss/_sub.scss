@@ -1,0 +1,121 @@
+.sub {
+  width: 100%;
+  @include bg ("back_img.jpg", no-repeat, 50% 0, null,#f3f3f3);
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: $white;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+  }
+}
+.bx_top {
+  background: #e7e7e7;
+  .sub_tit {
+    position: relative;
+    padding: 15px 20px 15px 32px;
+    font-size: 16px;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 20px;
+      margin-top: -8px;
+      display: inline-block;
+      width: 5px;
+      height: 16px;
+      background-color: $point;
+      border-radius: 10px;
+    }
+  }
+}
+
+//tab 메뉴
+.tab_btns {
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+  button {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    padding: 9px 30px;
+    text-align: center;
+    background-color: #d4d4d4;
+    box-sizing: border-box;
+    z-index: 2;
+    font-size: 15px;
+    color: $bold_black;
+    letter-spacing: -0.06em;
+    &.active {
+      border: 1px solid #d4d4d4;
+      border-bottom-color: #f3f3f3;
+      background-color: #f3f3f3;
+      color: $bold_black;
+      box-shadow: 1px 1px 0 $white inset; 
+    }
+    &+button {
+      margin-left: 1px;
+    }
+  }
+}
+.tab_cont {
+  display: none;
+  position: relative;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 0 1px $white inset; 
+  padding: 22px 20px;
+  border-top: 1px solid #d4d4d4;
+  box-sizing: border-box;
+  &.active {
+    display: block;
+  }
+  .wrap_notice {
+    padding-right: 93px;
+    li {
+      width: 100%;
+      padding: 5px 0;
+      box-sizing: border-box;
+    }
+    .tit {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+      font-size: 13px;
+      padding: 8px 16px 8px 0;
+      box-sizing: border-box;
+      vertical-align: middle;
+      font-weight: $bold;
+    }
+    .search_tp {
+      display: inline-block;
+      width: 961px;
+      vertical-align: middle;
+    }
+  }
+  .btn.mid {
+    position: absolute;
+    bottom: 30px;
+    right: 32px;
+  }
+}
+[data-tab-content] {
+  display: none;
+}
+.active[data-tab-content] {
+  display: block;
+}
+
+.bx_ground {
+  padding: 8px 20px;
+  min-height: 770px;
+  box-sizing: border-box;
+  .btn.edit {
+    float: right;
+    margin: 20px 0 10px
+  }
+  .bx_btn {
+    text-align: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+  }
+}

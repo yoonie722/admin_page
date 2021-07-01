@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<include src="../include/head.html" title="Vrix | main"></include>
+<body class="main">
+  <include src="../include/header.html"></include>
+  <include src="../include/pop/popup.html"></include>
+  <section class="container">
+    <div class="cont">
+      <div class="top_tit">
+        <h2>공지사항</h2>
+        <a class="more" href="#" title="더보기">더보기</a>
+      </div>
+      <ul class="bx_notice">
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내</span> <em>New</em> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <em>New</em><span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
+      </ul>
+
+      <!-- S: 데이터가 없을 경우 -->
+      <!-- <ul class="bx_notice nodata">
+        <li>등록된 공지사항이 없습니다.</li>
+      </ul> -->
+      <!-- E: 데이터가 없을 경우 -->
+    </div>
+    <div class="cont">
+      <div class="top_tit">
+        <h2>항목별 현황</h2>
+        <div class="date_area">
+          <span class="date">Update : 2017.08.01 00:00</span>
+          <button class="btn refresh" type="button">새로고침</button>
+        </div>
+      </div>
+      <div class="bx_square">
+        <article class="wrap_item">
+          <h3 class="sq_tit">문의현황</h3>
+          <div class="nodata"> <!-- 데이터 없는 경우 -->
+            <span>현황을 가져오는데 실패하였습니다.</span>
+          </div>
+        </article>
+        <article class="wrap_item">
+          <h3 class="sq_tit">컨텐츠 Mid-roll 요청 현황</h3>
+          <ul class="cell loading"><!-- 로딩중일때에는 class .loading 추가 -->
+            <li>요청 수<span>(분석중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>분석완료: <a class="num" href="#" title="3">3</a>건</li>
+            <li>관리자 컨펌 대기 <a class="num" href="#" title="3">3</a>건</li>
+            <li>분석완료</li>
+          </ul>
+        </article>
+        <article class="wrap_item">
+          <h3 class="sq_tit">문의현황</h3>
+          <ul class="cell">
+            <li>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>문의 답변: <a class="num" href="#" title="3">3</a>건</li>
+          </ul>
+        </article>
+        <article class="wrap_item">
+          <h3 class="sq_tit">문의현황</h3>
+          <ul class="cell">
+            <li>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>문의 답변: <a class="num" href="#" title="3">3</a>건</li>
+          </ul>
+        </article>
+        <article class="wrap_item">
+          <h3 class="sq_tit">사용자 현황</h3>
+          <ul class="cell">
+            <li>관리자: <a class="num" href="#" title="1">1</a>명</li>
+            <li>파트너: <a class="num" href="#" title="2">2</a>명</li>
+            <li>AD Network: <a class="num" href="#" title="4">4</a>명</li>
+            <li>Publisher: <a class="num" href="#" title="1">1</a>명</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="cont">
+      <div class="bx_square">
+        <div id="graph_container01"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $(function(){
+      // 하이차트
+      Highcharts.chart('graph_container01', {
+        credits:{ enabled:false }, //하이차트 로고 지우기
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: '광고효과 추이'
+        },
+        yAxis: {
+          title: {
+          text: ''
+          },
+        },
+        xAxis: {
+          categories: ['2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06'],
+          marker: {
+            symbol: 'circle'
+          }
+        },
+        plotOptions: {
+          line: {
+            dataLabels: {
+              enabled: true
+            },
+            enableMouseTracking: false,
+          }
+        },
+        series: [{
+          name: '비활성',
+          data: [],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#cccccc'
+          }
+        }, {
+          name: '노출수',
+          data: [5, 6, 7, 8, 14, 7, 8, 9],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#ff3c4e'
+          }
+        }, {
+          name: '클릭수',
+          data: [9, 8, 7, 6, 10, 12, 4, 7],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#42a8ff'
+          }
+        }, {
+          name: 'CTR(%)',
+          data: [7, 9, 12, 10, 3, 6, 9, 5],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#73cb48'
+          }
+        }],
+      });
+    });
+  </script>
+  <include src="../include/footer.html"></include>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@function calcRem($size) { /*Mobile용 믹스인*/
+  $remSize: $size / $font_def;
+  @return  #{$remSize}rem;
+}
+
+@function calcPercent($size, $defsize) { /*Mobile용 믹스인*/
+  $remSize: $size / $defsize;
+  @return percentage($remSize);
+}
+
+@mixin setFont($nm, $fileNm, $weight:100){
+  @font-face {
+    font-family: $nm;
+    font-weight: $weight;
+    font-display: block;
+    src: local("※"), url($font_url + $fileNm + ".woff2") format('woff2'),
+    local("※"), url($font_url + $fileNm + ".woff") format("woff");
+  }
+}
+
+@mixin fontfamily($weight:100){
+  font-family: $family;
+  font-weight:$weight;
+}
+
+@mixin bg($fileNm:null, $repeat:no-repeat, $bgPos:0 0, $bgSize:null, $bgColor:null){
+  background:$bgColor url($url + $fileNm + $version) $repeat $bgPos;
+  @if $bgSize != null {
+    background-size:$bgSize;
+  }
+}
+@mixin ellipsis($type:null,$num:2) {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  @if $type == multi {
+    white-space: normal;
+    word-wrap: break-word;
+    display:-webkit-box;
+    -webkit-line-clamp:$num;
+    -webkit-box-orient:vertical;
+  }@else{
+    white-space:nowrap;
+  }
+}
+
+@mixin clear($display:block){
+  display: $display;
+  clear: both;
+  content: "";
+}
+
+@mixin set_content($width:auto, $height:auto, $display:inline-block, $position:relative,  $color:null) {
+  content:"";
+  width:$width;
+  height:$height;
+  display:$display;
+  position:$position;
+  @if $color != null {
+    background:$color;
+  }
+}
+
+@mixin blind {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -2000em;
+}
+
+@mixin ico_cancel($size: 21px, $thick: 2px, $color: #000, $padding: 0, $display: inline-block, $position: relative) {
+  position: $position;
+  display: $display;
+  width: $size + $padding*2;
+  height: $size + $padding*2;
+  &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: round($size*$sqrt_2 - $thick);
+      height: $thick;
+      background-color: $color;
+  }
+  &:before {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+      -webkit-transform: translate(-50%, -50%) rotate(135deg);
+      transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
